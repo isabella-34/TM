@@ -1,0 +1,3 @@
+0 Bien
+1 Mal
+2 Meh
