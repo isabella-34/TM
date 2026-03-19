@@ -15,7 +15,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento de Imágenes")
 st.subheader("¿Cómo estás?")
-st.write("Haz gestos con la mano para indicar tu estado: \n - Pulgar arriba = bien. \n - Pulgar abajo = mal. \n - Aplanar la mano = meh.")
+st.write("Haz gestos con la mano para indicar tu estado:\n- Pulgar arriba = bien.\n- Pulgar abajo = mal.\n- Aplanar la mano = meh.")
 #st.write("Versión de Python:", platform.python_version())
 image = Image.open('foto.jpg')
 st.image(image, width=250)
