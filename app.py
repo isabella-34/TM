@@ -14,11 +14,16 @@ model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento de Imágenes")
-st.subheader("¿Cómo estás?")
-st.write("Haz gestos con la mano para indicar tu estado:\n- Pulgar arriba = bien.\n- Pulgar abajo = mal.\n- Aplanar la mano = meh.")
+
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("¿Cómo estás?")
+    st.write("Haz gestos con la mano para indicar tu estado:\n- Pulgar arriba = bien.\n- Pulgar abajo = mal.\n- Aplanar la mano = meh.")
 #st.write("Versión de Python:", platform.python_version())
-image = Image.open('foto.jpg')
-st.image(image, width=250)
+with col2:
+    image = Image.open('foto.jpg')
+    st.image(image, width=250)
+    
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
 img_file_buffer = st.camera_input("Toma una Foto")
